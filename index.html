@@ -846,6 +846,45 @@
     margin-top: 8px;
   }
 
+  /* ============================================
+     CUSTOM BY REQUEST — MULTI-IMAGE GRID
+     ============================================ */
+  .custom-image-grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    gap: 2px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .custom-image-grid .grid-hero {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .custom-image-grid .grid-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .custom-image-grid .grid-thumbs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+  }
+
+  .custom-image-grid .grid-thumbs img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
   .product-badge {
     position: absolute;
     top: 16px;
@@ -2100,9 +2139,17 @@
     <!-- 5. CUSTOM BY REQUEST -->
     <article class="product-card" id="custom-request">
       <div class="product-image">
-        <div class="product-image-placeholder">
-          <div class="hash">#</div>
-          <div class="label">Custom by Request</div>
+        <div class="product-badge">Dipercaya Instansi Besar</div>
+        <div class="custom-image-grid">
+          <div class="grid-hero">
+            <img src="images/custom-request-hero.jpg" alt="Sofa custom das# furniture untuk instansi pemerintah Jakarta" loading="lazy">
+          </div>
+          <div class="grid-thumbs">
+            <img src="images/custom-request-ungu.jpg" alt="Sofa custom warna ungu das# furniture">
+            <img src="images/custom-request-klasik.jpg" alt="Sofa custom klasik coklat das# furniture">
+            <img src="images/custom-request-hijau-oranye.jpg" alt="Sofa custom hijau oranye das# furniture">
+            <img src="images/custom-request-merah-hitam.jpg" alt="Sofa custom merah hitam das# furniture">
+          </div>
         </div>
       </div>
       <div class="product-content">
