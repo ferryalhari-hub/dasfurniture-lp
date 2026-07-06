@@ -885,6 +885,47 @@
     display: block;
   }
 
+  /* ============================================
+     SERVICE SOFA — BEFORE/AFTER GRID
+     ============================================ */
+  .service-image-grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .service-image-grid .service-cell {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-image-grid .service-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .service-image-grid .service-label {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    z-index: 2;
+    padding: 3px 8px;
+    background: var(--ink);
+    color: var(--gold);
+    font-family: var(--font-mono);
+    font-size: 8px;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+
   .product-badge {
     position: absolute;
     top: 16px;
@@ -2176,9 +2217,23 @@
     <!-- 6. SERVICE SOFA -->
     <article class="product-card">
       <div class="product-image">
-        <div class="product-image-placeholder">
-          <div class="hash">#</div>
-          <div class="label">Service Sofa</div>
+        <div class="service-image-grid">
+          <div class="service-cell">
+            <img src="images/service-recliner-before.jpg" alt="Recliner sebelum service das# furniture" loading="lazy">
+            <span class="service-label">Sebelum</span>
+          </div>
+          <div class="service-cell">
+            <img src="images/service-recliner-after.jpg" alt="Recliner sesudah recoloring das# furniture" loading="lazy">
+            <span class="service-label">Sesudah</span>
+          </div>
+          <div class="service-cell">
+            <img src="images/service-victorian-before.jpg" alt="Sofa Victorian sebelum restorasi das# furniture" loading="lazy">
+            <span class="service-label">Sebelum</span>
+          </div>
+          <div class="service-cell">
+            <img src="images/service-victorian-after.jpg" alt="Sofa Victorian sesudah restorasi das# furniture" loading="lazy">
+            <span class="service-label">Sesudah</span>
+          </div>
         </div>
       </div>
       <div class="product-content">
